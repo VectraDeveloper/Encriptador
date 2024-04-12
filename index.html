@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador Oracle ONE</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    
+
+  </head>
+
+
+  <body>
+    <!-- Header con el logotipo de alura latam -->
+    <header>
+      <img src="./assets/Logo.png" alt="Logo de alura latam" id="logo-alura" />
+    </header>
+
+    <!-- Main con el contenido de la página -->
+    <main class="main">
+      <div class="contenedor-principal">
+        <section class="contenedor-entrada">
+          <textarea
+            name=""
+            id="texto-entrada"
+            cols="30"
+            rows="10"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+          <div class="contenedor-botones">
+            <button onclick="encriptar()">Encriptar</button>
+            <button onclick="desencriptar()">Desencriptar</button>
+          </div>
+        </section>
+
+        <section class="contenedor-resultado">
+          <div id="mostrar-resultado"><p>Ningun Mensaje fue encontrado</p>
+          <p>Ingresa el texto que deseas encriptar o desencriptar</p></div>
+            <div class="contenedor-botones"></div>
+          <button id="boton-copiar" onclick="btnCopiar">Copiar</button>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>Encriptador Oracle ONE Desarrollado por Isaac J Ruiz</p>
+      <div>
+        <a href="https://www.linkedin.com/in/isaacjruiz/" target="_blank">aca va el logo jejej con boostrap icons</a>
+        <a href="https://github.com/isaacjruiz" target="_blank">aca el de github guarro</a>
+      </div>
+    </footer>
+
+
+  </body>
+</html>
