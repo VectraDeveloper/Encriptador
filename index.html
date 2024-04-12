@@ -6,9 +6,6 @@
     <title>Encriptador Oracle ONE</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-
-    
-
   </head>
 
 
@@ -22,16 +19,10 @@
     <main class="main">
       <div class="contenedor-principal">
         <section class="contenedor-entrada">
-          <textarea
-            name=""
-            id="texto-entrada"
-            cols="30"
-            rows="10"
-            placeholder="Ingrese el texto aquí"
-          ></textarea>
+          <input id="texto-entrada" type="text" placeholder="Ingrese su texto aquí.">
           <div class="contenedor-botones">
-            <button onclick="encriptar()">Encriptar</button>
-            <button onclick="desencriptar()">Desencriptar</button>
+            <button onclick="btnEncriptar()">Encriptar</button>
+            <button onclick="btnDesencriptar()">Desencriptar</button>
           </div>
         </section>
 
@@ -39,7 +30,7 @@
           <div id="mostrar-resultado"><p>Ningun Mensaje fue encontrado</p>
           <p>Ingresa el texto que deseas encriptar o desencriptar</p></div>
             <div class="contenedor-botones"></div>
-          <button id="boton-copiar" onclick="btnCopiar">Copiar</button>
+          <button id="boton-copiar" onclick="btnCopiar()">Copiar</button>
         </section>
       </div>
     </main>

@@ -1,5 +1,5 @@
 //Texto que se recibe d ela entrda del usuario
-let textoEntrada = document.getElementById('textoEntrada');
+var textoEntrada = document.getElementById('textoEntrada');
 
 const resultado = document.getElementById('mostrarResultado')
 
@@ -10,19 +10,25 @@ const VocalesEncriptadas = [
     ["i", "imes"],
     ["a", "ai"],
     ["o", "ober"],
-    ["u", "ufat"],
+    ["u", "ufat"]
 ]
 
 function encriptar (mensajeEncriptado){
-    mensajeEncriptado = mensajeEncriptado.toLowerCase()
+    vocalesEncriptadas
+    mensajeEncriptado = mensajeEncriptado.toLowerCase();
 
     for (let i = 0; i <VocalesEncriptadas.length; i++ ){
         if(mensajeEncriptado.includes(VocalesEncriptadas[i][0])){
             mensajeEncriptado = mensajeEncriptado.replaceAll(VocalesEncriptadas[i][0], VocalesEncriptadas[i][1])
-        }
-    }
+        };
+    };
     return mensajeEncriptado;
 
+};
+
+function btnEncriptar(){
+    const textoEncriptado = encriptar(textoEntrada.value)
+    resultado.innerHTML = textoEncriptado;
 }
 
 function desencriptar(mensajeDesencriptado){ 
@@ -34,13 +40,10 @@ function desencriptar(mensajeDesencriptado){
     }
 }
 
-function btnEncriptar(){
-    const textoEncriptado = encriptar(textoEntrada)
-    resultado.innerHTML = textoEncriptado;
-}
+
 
 function btnDesencriptar() {
-    const textoDesencriptado = desencriptar(textoEntrada)
+    const textoDesencriptado = desencriptar(textoEntrada.value)
     resultado.innerHTML = textoDesencriptado;
 }
 
