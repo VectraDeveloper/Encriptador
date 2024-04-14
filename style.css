@@ -3,7 +3,7 @@ body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100vh; /* == == */
 }
 
 #logo-alura{
@@ -19,7 +19,6 @@ header {
 main{
     margin: 0 auto;
     max-width: 1024px;
-    padding: 20px;
     height: 80vh;
     background-color: antiquewhite; /* === */
  
@@ -28,10 +27,8 @@ main{
 footer{
     background-color: #333;
     color: rgb(144, 20, 20);
+    height: 10vh; 
     text-align: center;
-    padding: 10px;
-     /* == Notaras desbordamiento el alto no es suficiente para el texto == */
-    height: 10vh;
     background-color: burlywood; /* === */ 
 }
 
