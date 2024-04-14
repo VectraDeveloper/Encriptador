@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador Oracle ONE</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
 
 
@@ -21,14 +20,16 @@
         <section class="contenedor-entrada">
           <input id="texto-entrada" type="text" placeholder="Ingrese su texto aquí.">
           <div class="contenedor-botones">
-            <button onclick="btnEncriptar()">Encriptar</button>
+            <button onclick="btnEncriptar()" id="btn_encriptar">Encriptar</button>
             <button onclick="btnDesencriptar()">Desencriptar</button>
           </div>
         </section>
 
         <section class="contenedor-resultado">
-          <div id="mostrar-resultado"><p>Ningun Mensaje fue encontrado</p>
-          <p>Ingresa el texto que deseas encriptar o desencriptar</p></div>
+          <div id="mostrar-resultado">
+            <p>Ningun Mensaje fue encontrado</p>
+          <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+        </div>
             <div class="contenedor-botones"></div>
           <button id="boton-copiar" onclick="btnCopiar()">Copiar</button>
         </section>
@@ -42,6 +43,7 @@
       </div>
     </footer>
 
+    <script src="script.js"></script>
 
   </body>
 </html>

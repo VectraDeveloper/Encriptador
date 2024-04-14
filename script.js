@@ -1,8 +1,11 @@
 //Texto que se recibe d ela entrda del usuario
-var textoEntrada = document.getElementById('textoEntrada');
+const textoEntrada = document.getElementById('texto-entrada');
 
-const resultado = document.getElementById('mostrarResultado')
+const resultado = document.getElementById('mostrar-resultado');
 
+/*==================== 
+  === Validaciones ===
+  ==================== */
 
 const VocalesEncriptadas = [
 
@@ -14,10 +17,9 @@ const VocalesEncriptadas = [
 ]
 
 function encriptar (mensajeEncriptado){
-    vocalesEncriptadas
     mensajeEncriptado = mensajeEncriptado.toLowerCase();
 
-    for (let i = 0; i <VocalesEncriptadas.length; i++ ){
+    for (let i = 0; i < VocalesEncriptadas.length; i++ ){
         if(mensajeEncriptado.includes(VocalesEncriptadas[i][0])){
             mensajeEncriptado = mensajeEncriptado.replaceAll(VocalesEncriptadas[i][0], VocalesEncriptadas[i][1])
         };
@@ -26,33 +28,34 @@ function encriptar (mensajeEncriptado){
 
 };
 
+function Desencriptar(mensajeDesencriptado){ 
+    mensajeDesencriptado = mensajeDesencriptado.toLowerCase()
+    for (let i = 0; i <VocalesEncriptadas.length; i++ ){
+        if(mensajeDesencriptado.includes(VocalesEncriptadas[i][1])){
+            mensajeDesencriptado = mensajeDesencriptado.replaceAll(VocalesEncriptadas[i][1], VocalesEncriptadas[i][0])
+        };
+    };
+    return mensajeDesencriptado;
+};
+
+
+/*==================== 
+  ===== Botones ======
+  ==================== */
+
 function btnEncriptar(){
     const textoEncriptado = encriptar(textoEntrada.value)
     resultado.innerHTML = textoEncriptado;
 }
 
-function desencriptar(mensajeDesencriptado){ 
-    mensajeDesencriptado = mensajeDesencriptado.toLowerCase()
-    for (let i = 0; i <VocalesEncriptadas.length; i++ ){
-        if(mensajeDesencriptado.includes(VocalesEncriptadas[i][1])){
-            mensajeDesencriptado = mensajeDesencriptado.replaceAll(VocalesEncriptadas[i][1], VocalesEncriptadas[i][0])
-        }
-    }
-}
-
-
-
 function btnDesencriptar() {
-    const textoDesencriptado = desencriptar(textoEntrada.value)
+    const textoDesencriptado = Desencriptar(textoEntrada.value)
     resultado.innerHTML = textoDesencriptado;
 }
 
-function btnCopiar(){
+function btnCopiar() {
     const textoCopiado = resultado.textContent;
     navigator.clipboard.writeText(textoCopiado);
-    alert('Texto copiado')
-
+    alert('Texto copiado');
 }
-
-
 
