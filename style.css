@@ -3,16 +3,25 @@ body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 #logo-alura{
     top: 40px;
     left: 40px;
 }
+
+header {
+    height: 10vh;
+    background-color: aquamarine; /* === */
+}
+
 main{
     margin: 0 auto;
     max-width: 1024px;
     padding: 20px;
+    height: 80vh;
+    background-color: antiquewhite; /* === */
  
 }
 
@@ -21,9 +30,9 @@ footer{
     color: rgb(144, 20, 20);
     text-align: center;
     padding: 10px;
-
-
-
+     /* == Notaras desbordamiento el alto no es suficiente para el texto == */
+    height: 10vh;
+    background-color: burlywood; /* === */ 
 }
 
 .contenedor-principal{
